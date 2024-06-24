@@ -3,8 +3,8 @@ const hubspot = require("@hubspot/api-client");
 const axios = require("axios").default;
 
 app.timer("suscribers", {
-  // schedule: '0 */2 * * * *',
-  schedule: "*/30 * * * * *",
+  schedule: '0 */2 * * * *',
+  // schedule: "*/30 * * * * *",
   handler: async (request, context) => {
     try {
       const requestConfig = {
