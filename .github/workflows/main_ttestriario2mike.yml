@@ -8,14 +8,14 @@ on:
 
 env:
   AZURE_FUNCTIONAPP_PACKAGE_PATH: '.' # Ruta a tu proyecto de aplicación web, por defecto es la raíz del repositorio
-  NODE_VERSION: '18.x' # Versión de Node.js a utilizar, ajustada a 14.x según recomendación
+  NODE_VERSION: '18.x' # Versión de Node.js a utilizar
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout GitHub Action'
-        uses: actions/checkout@v2  # Usar la versión 2 de actions/checkout
+        uses: actions/checkout@v4
 
       - name: Setup Node ${{ env.NODE_VERSION }} Environment
         uses: actions/setup-node@v2
@@ -25,10 +25,11 @@ jobs:
       - name: 'Resolve Project Dependencies Using Npm'
         shell: bash
         run: |
-          cd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'  # Utiliza cd en lugar de pushd/popd
+          pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
           npm install
           npm run build --if-present
           npm run test --if-present
+          popd
 
       - name: Zip artifact for deployment
         run: zip -r release.zip .
@@ -44,7 +45,7 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}  # Asegúrate de que la salida 'deploy-to-webapp' esté definida correctamente
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     permissions:
       id-token: write
 
@@ -56,17 +57,17 @@ jobs:
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
-
+      
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}  # Usa 'creds' para proporcionar las credenciales de Azure
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_3DC01C70CB1A49F18204957FCDE1DCB9 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_4E779E5E0F9F44758EECDF0167F8589F }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_FB5ED5593E4B474684E3F03FE5A4C6B2 }}
 
-      - name: Set subscription
-        run: az account set --subscription ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-
-      - name: Deploy to Azure Function App
+      - name: 'Run Azure Functions Action'
         uses: Azure/functions-action@v1
         with:
           app-name: 'ttestriario2mike'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+ 
