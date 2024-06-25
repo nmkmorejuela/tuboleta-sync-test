@@ -11,7 +11,7 @@ app.timer("suscribers", {
         method: "GET",
         url: "https://api.hubapi.com/cms/v3/hubdb/tables/20720399/rows?synced=false",
         headers: {
-          Authorization: "Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60",
+          Authorization: "Bearer xxxxxxx",
         },
         timeout: 10000,
       };
@@ -50,15 +50,15 @@ app.timer("suscribers", {
 
       const config_token = {
         method: "POST",
-        url: `http://172.206.168.91/auth/token`,
+        url: `xxxxxxxxxxxxxxxxxxxxxx`,
         headers: {
           accept: "application/json",
           "content-type": "application/json",
           Sandbox: true,
         },
         data: {
-          userName: "triario2024usr",
-          password: "T@k2.F9d1lS45g",
+          userName: "xxxxx",
+          password: "xxxxxxxxxx",
         },
         timeout: 10000,
       };
@@ -73,7 +73,7 @@ app.timer("suscribers", {
 
       const config_suscribers = {
         method: "GET",
-        url: `http://172.206.168.91/triario/suscribers`,
+        url: `xxxxxxxxxxxxxxxx`,
         headers: {
           accept: "application/json",
           "content-type": "application/json",
@@ -304,7 +304,7 @@ app.timer("suscribers", {
           url: `https://api.hubapi.com/crm/v3/objects/contacts/batch/create`,
           headers: {
             "content-type": "application/json",
-            Authorization: `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+            Authorization: `Bearer xxxxxxxxxxxxxxxxxxx`,
           },
           data: suscribersProperties,
           timeout: 10000,
@@ -333,7 +333,7 @@ app.timer("suscribers", {
         method: "GET",
         url: "https://api.hubapi.com/cms/v3/hubdb/tables/20929462/rows?synced=false",
         headers: {
-          Authorization: "Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60",
+          Authorization: "Bearer xxxxxxxxxxxxxxxxxxx",
         },
         timeout: 10000,
       };
@@ -375,7 +375,7 @@ app.timer("suscribers", {
 
       const config_sales = {
         method: "GET",
-        url: `http://172.206.168.91/triario/sales`,
+        url: `http://xxxxxxxxxxxxxxxxxxx/triario/sales`,
         headers: {
           accept: "application/json",
           "content-type": "application/json",
@@ -660,7 +660,7 @@ app.timer("suscribers", {
           url: `https://api.hubapi.com/crm/v3/objects/p45760644_historial_de_compras/batch/create`,
           headers: {
             "content-type": "application/json",
-            Authorization: `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+            Authorization: `Bearer xxxxxxxxxxxxxxxxxxx`,
           },
           data: salesProperties,
           timeout: 10000,
@@ -680,7 +680,7 @@ app.timer("suscribers", {
                 url: `https://api.hubspot.com/crm/v3/objects/contacts/${existContact}/associations/p45760644_historial_de_compras/${sale.id}/18`,
                 headers: {
                   "content-type": "application/json",
-                  Authorization: `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+                  Authorization: `Bearer xxxxxxxxxxxxxxxxxxx`,
                 },
               };
 
@@ -718,7 +718,7 @@ app.timer("suscribers", {
                 url: `https://api.hubspot.com/crm/v3/objects/contacts/${existContact}/associations/p45760644_historial_de_compras/${saleInfo.hs_object_id}/18`,
                 headers: {
                   "content-type": "application/json",
-                  Authorization: `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+                  Authorization: `Bearer xxxxxxxxxxxxxxxxxxx`,
                 },
               };
 
@@ -752,7 +752,7 @@ app.timer("suscribers", {
         method: "GET",
         url: "https://api.hubapi.com/cms/v3/hubdb/tables/21090178/rows?synced=false",
         headers: {
-          Authorization: "Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60",
+          Authorization: "Bearer xxxxxxxxxxxxxxxxxxx",
         },
         timeout: 10000,
       };
@@ -794,7 +794,7 @@ app.timer("suscribers", {
 
       const config_carts = {
         method: "GET",
-        url: `http://172.206.168.91/triario/carts`,
+        url: `http://xxxxxxxxxxxxxxxxxxx/triario/carts`,
         headers: {
           accept: "application/json",
           "content-type": "application/json",
@@ -1093,7 +1093,7 @@ app.timer("suscribers", {
           url: `https://api.hubapi.com/crm/v3/objects/deals/batch/create`,
           headers: {
             "content-type": "application/json",
-            Authorization: `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+            Authorization: `Bearer xxxxxxxxxxxxxxxxxxx`,
           },
           data: cartsProperties,
           timeout: 10000,
@@ -1113,7 +1113,7 @@ app.timer("suscribers", {
                 url: `https://api.hubspot.com/crm/v3/objects/contacts/${existContact}/associations/deals/${cart.id}/4`,
                 headers: {
                   "content-type": "application/json",
-                  Authorization: `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+                  Authorization: `Bearer xxxxxxxxxxxxxxxxxxx`,
                 },
               };
 
@@ -1151,7 +1151,7 @@ app.timer("suscribers", {
                 url: `https://api.hubspot.com/crm/v3/objects/contacts/${existContact}/associations/p45760644_historial_de_compras/${cartInfo.hs_object_id}/18`,
                 headers: {
                   "content-type": "application/json",
-                  Authorization: `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+                  Authorization: `Bearer xxxxxxxxxxxxxxxxxxx`,
                 },
               };
 
@@ -1191,7 +1191,7 @@ const validateContactHubDB = async (userId) => {
       method: 'GET',
       url: `https://api.hubapi.com/cms/v3/hubdb/tables/20720399/rows?user_id__eq=${userId}`,
       headers: {
-          'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+          'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
       },
       timeout: 10000
   }
@@ -1211,7 +1211,7 @@ const InsertUserHubDB = async (data) => {
       method: 'POST',
       url: 'https://api.hubapi.com/cms/v3/hubdb/tables/20720399/rows',
       headers: {
-          'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+          'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
           'content-type': 'application/json'
       },
 
@@ -1226,7 +1226,7 @@ const InsertUserHubDB = async (data) => {
           {
               headers:{
                   'Content-Type': 'application/json',
-                  'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+                  'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
               }
           }
       );
@@ -1253,7 +1253,7 @@ const UpdateUserHubDB = async (user) => {
       url: `https://api.hubapi.com/cms/v3/hubdb/tables/20720399/rows/${hdbQuoteObject.id}/draft`,
       method: 'DELETE',
       headers: {
-          'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+          'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
       },
      
   }
@@ -1263,7 +1263,7 @@ const UpdateUserHubDB = async (user) => {
       {
           headers:{
               'Content-Type': 'application/json',
-              'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+              'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
           }
       }
   );
@@ -1297,7 +1297,7 @@ const SyncUserHubDB = async (users) => {
           url: `https://api.hubapi.com/cms/v3/hubdb/tables/20720399/rows/${hdbQuoteObject.id}/draft`,
           method: 'DELETE',
           headers: {
-              'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+              'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
           },
       
       }
@@ -1307,7 +1307,7 @@ const SyncUserHubDB = async (users) => {
           {
               headers:{
                   'Content-Type': 'application/json',
-                  'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+                  'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
               }
           }
       );
@@ -1335,7 +1335,7 @@ const validateUser = async (user) => {
       headers: {
           'accept': 'application/json',
           'content-type': 'application/json',
-          'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+          'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
       },
       data: {
           "properties": [
@@ -1366,7 +1366,7 @@ const validateUser = async (user) => {
           headers: {
               'accept': 'application/json',
               'content-type': 'application/json',
-              'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+              'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
           },
           data: {
               "properties": {
@@ -1417,7 +1417,7 @@ const validateSaleHubDB = async (saleId) => {
       method: 'GET',
       url: `https://api.hubapi.com/cms/v3/hubdb/tables/20929462/rows?exp_id__eq=${saleId}`,
       headers: {
-          'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+          'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
       },
       timeout: 10000
   }
@@ -1437,7 +1437,7 @@ const insertSaleHubDB = async (data) => {
       method: 'POST',
       url: 'https://api.hubapi.com/cms/v3/hubdb/tables/20929462/rows',
       headers: {
-          'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+          'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
           'content-type': 'application/json'
       },
 
@@ -1452,7 +1452,7 @@ const insertSaleHubDB = async (data) => {
           {
               headers:{
                   'Content-Type': 'application/json',
-                  'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+                  'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
               }
           }
       );
@@ -1476,7 +1476,7 @@ const updateSaleHubDB = async (sale) => {
       url: `https://api.hubapi.com/cms/v3/hubdb/tables/20929462/rows/${hdbQuoteObject.id}/draft`,
       method: 'DELETE',
       headers: {
-          'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+          'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
       },
      
   }
@@ -1486,7 +1486,7 @@ const updateSaleHubDB = async (sale) => {
       {
           headers:{
               'Content-Type': 'application/json',
-              'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+              'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
           }
       }
   );
@@ -1521,7 +1521,7 @@ const checkContactAssocSaleHubDB = async (expId, saleId) => {
       url: `https://api.hubapi.com/cms/v3/hubdb/tables/20929462/rows/${hdbQuoteObject.id}/draft`,
       method: 'DELETE',
       headers: {
-          'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+          'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
       },
   
   }
@@ -1531,7 +1531,7 @@ const checkContactAssocSaleHubDB = async (expId, saleId) => {
       {
           headers:{
               'Content-Type': 'application/json',
-              'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+              'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
           }
       }
   );
@@ -1565,7 +1565,7 @@ const syncSaleHubDB = async (saleId) => {
       url: `https://api.hubapi.com/cms/v3/hubdb/tables/20929462/rows/${hdbQuoteObject.id}/draft`,
       method: 'DELETE',
       headers: {
-          'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+          'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
       },
   
   }
@@ -1575,7 +1575,7 @@ const syncSaleHubDB = async (saleId) => {
       {
           headers:{
               'Content-Type': 'application/json',
-              'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+              'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
           }
       }
   );
@@ -1600,7 +1600,7 @@ const validateSale = async (sale) => {
       headers: {
           'accept': 'application/json',
           'content-type': 'application/json',
-          'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+          'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
       },
       data: {
           "properties": [
@@ -1634,7 +1634,7 @@ const getSaleByExp = async (sale) => {
       headers: {
           'accept': 'application/json',
           'content-type': 'application/json',
-          'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+          'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
       },
       data: {
           "properties": [
@@ -1675,7 +1675,7 @@ const getSale = async (saleId) => {
       headers: {
           'accept': 'application/json',
           'content-type': 'application/json',
-          'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+          'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
       }
   }
 
@@ -1697,7 +1697,7 @@ const validateContact = async (email) => {
       headers: {
           'accept': 'application/json',
           'content-type': 'application/json',
-          'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+          'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
       },
       data: {
           "properties": [
@@ -1800,7 +1800,7 @@ const validateCartHubDB = async (cartId) => {
       method: 'GET',
       url: `https://api.hubapi.com/cms/v3/hubdb/tables/21090178/rows?exp_id__eq=${cartId}`,
       headers: {
-          'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+          'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
       },
       timeout: 10000
   }
@@ -1820,7 +1820,7 @@ const insertCartHubDB = async (data) => {
       method: 'POST',
       url: 'https://api.hubapi.com/cms/v3/hubdb/tables/21090178/rows',
       headers: {
-          'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+          'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
           'content-type': 'application/json'
       },
 
@@ -1835,7 +1835,7 @@ const insertCartHubDB = async (data) => {
           {
               headers:{
                   'Content-Type': 'application/json',
-                  'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+                  'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
               }
           }
       );
@@ -1859,7 +1859,7 @@ const updateCartHubDB = async (cart) => {
       url: `https://api.hubapi.com/cms/v3/hubdb/tables/21090178/rows/${hdbQuoteObject.id}/draft`,
       method: 'DELETE',
       headers: {
-          'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+          'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
       },
      
   }
@@ -1869,7 +1869,7 @@ const updateCartHubDB = async (cart) => {
       {
           headers:{
               'Content-Type': 'application/json',
-              'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+              'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
           }
       }
   );
@@ -1904,7 +1904,7 @@ const checkContactAssocCartHubDB = async (expId, cartId) => {
       url: `https://api.hubapi.com/cms/v3/hubdb/tables/21090178/rows/${hdbQuoteObject.id}/draft`,
       method: 'DELETE',
       headers: {
-          'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+          'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
       },
   
   }
@@ -1914,7 +1914,7 @@ const checkContactAssocCartHubDB = async (expId, cartId) => {
       {
           headers:{
               'Content-Type': 'application/json',
-              'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+              'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
           }
       }
   );
@@ -1948,7 +1948,7 @@ const syncCartHubDB = async (cartId) => {
       url: `https://api.hubapi.com/cms/v3/hubdb/tables/21090178/rows/${hdbQuoteObject.id}/draft`,
       method: 'DELETE',
       headers: {
-          'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+          'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
       },
   
   }
@@ -1958,7 +1958,7 @@ const syncCartHubDB = async (cartId) => {
       {
           headers:{
               'Content-Type': 'application/json',
-              'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+              'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
           }
       }
   );
@@ -2018,7 +2018,7 @@ const getCart = async (cartsId) => {
       headers: {
           'accept': 'application/json',
           'content-type': 'application/json',
-          'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+          'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
       }
   }
 
@@ -2041,7 +2041,7 @@ const validateCart = async (cart) => {
       headers: {
           'accept': 'application/json',
           'content-type': 'application/json',
-          'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+          'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
       },
       data: {
           "properties": [
@@ -2074,7 +2074,7 @@ const getCartByExp = async (cart) => {
       headers: {
           'accept': 'application/json',
           'content-type': 'application/json',
-          'Authorization': `Bearer pat-na1-194730cb-f1f2-45c3-8499-82ed47663c60`,
+          'Authorization': `Bearer xxxxxxxxxxxxxxxxxxx`,
       },
       data: {
           "properties": [
